@@ -1,0 +1,12 @@
+{
+  "profileUrls": [
+    "https://www.linkedin.com/in/williamhgates",
+    "https://www.linkedin.com/in/jeffweiner08",
+    "https://www.linkedin.com/in/satyanadella"
+  ],
+  "maxProfiles": 10,
+  "delayBetweenRequests": 3000,
+  "proxyConfiguration": {
+    "useApifyProxy": false
+  }
+}
