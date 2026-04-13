@@ -1,0 +1,57 @@
+{
+  "actorSpecification": 1,
+  "name": "linkedin-profile-scraper",
+  "title": "LinkedIn Profile Scraper (Free Tier Optimized)",
+  "description": "Extract public profile data from LinkedIn. Optimized for Apify free tier with low memory usage and efficient scraping.",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "empty-js"
+  },
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "LinkedIn Profiles",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "name",
+              "headline",
+              "location",
+              "url",
+              "status"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "name": {
+                "label": "Name",
+                "format": "text"
+              },
+              "headline": {
+                "label": "Headline",
+                "format": "text"
+              },
+              "location": {
+                "label": "Location",
+                "format": "text"
+              },
+              "url": {
+                "label": "Profile URL",
+                "format": "link"
+              },
+              "status": {
+                "label": "Status",
+                "format": "text"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dockerfile": "./Dockerfile"
+}
