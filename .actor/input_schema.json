@@ -1,0 +1,52 @@
+{
+  "title": "LinkedIn Profile Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "profileUrls": {
+      "title": "LinkedIn Profile URLs",
+      "type": "array",
+      "description": "List of LinkedIn profile URLs to scrape. Example: https://www.linkedin.com/in/username",
+      "editor": "stringList",
+      "placeholderValue": "https://www.linkedin.com/in/example-profile",
+      "minItems": 1,
+      "maxItems": 1000
+    },
+    "maxProfiles": {
+      "title": "Maximum Profiles to Scrape",
+      "type": "integer",
+      "description": "Maximum number of profiles to scrape (helps control costs on free tier)",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 500,
+      "editor": "number"
+    },
+    "delayBetweenRequests": {
+      "title": "Delay Between Requests (ms)",
+      "type": "integer",
+      "description": "Delay in milliseconds between each profile scrape. Higher values = more polite scraping, less chance of being blocked. Recommended: 2000-5000ms",
+      "default": 2000,
+      "minimum": 1000,
+      "maximum": 10000,
+      "editor": "number"
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy settings for the scraper",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": false
+      },
+      "properties": {
+        "useApifyProxy": {
+          "title": "Use Apify Proxy",
+          "type": "boolean",
+          "description": "Enable Apify proxy (uses more credits but helps avoid IP bans). Note: Free tier has limited proxy access.",
+          "default": false
+        }
+      }
+    }
+  },
+  "required": ["profileUrls"]
+}
