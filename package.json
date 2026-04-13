@@ -1,0 +1,27 @@
+{
+  "name": "linkedin-scraper",
+  "version": "1.0.0",
+  "description": "LinkedIn profile scraper optimized for Apify free tier",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "apify": "^3.2.0",
+    "crawlee": "^3.7.0"
+  },
+  "keywords": [
+    "linkedin",
+    "scraper",
+    "apify",
+    "automation",
+    "data-extraction"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
